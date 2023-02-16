@@ -1,4 +1,30 @@
 ﻿@{
     ViewData["Title"] = "Brands and Laptops";
 }
+@model LaptopMVCEntityFramework.Models.ViewModels.BrandLaptopsDisplayViewModel
+
+<div>
+    <h1>All Brands and Laptops</h1>
+
+    @foreach (var brandLaptopGrouping in Model.LaptopsByBrand)
+    {
+        <h3>@brandLaptopGrouping.Key</h3>
+        <ul>
+            @foreach (var laptop in brandLaptopGrouping)
+            {
+                <li class="mb-lg-3">
+                    @laptop.Model <br>
+                    @laptop.Year  <br>
+                    $@laptop.Price
+                </li>
+            }
+        </ul>
+    }
+
+    @foreach (var brand in Model.BrandsWithNoLaptops)
+    {
+        <h3>@brand.Name</h3>
+        <p>No Laptops</p>
+    }
+</div>
 

@@ -1,3 +1,58 @@
 ﻿@{
     ViewData["Title"] = "Filtering & Ordering Brands";
 }
+
+@model LaptopMVCEntityFramework.Models.ViewModels.OrderingFilteringBrandViewModel
+
+<div>
+    <form method="post">
+        <div>
+            <label asp-for="BrandName"></label>
+            <select asp-for="BrandName" asp-items="Model.BrandOptions"></select>
+        </div>
+
+        <div>
+            <label asp-for="OrderType"></label>
+            <select asp-for="OrderType" asp-items="Model.Ordering"></select>
+        </div>
+
+        <div>
+            <label asp-for="FilterType"></label>
+            <select asp-for="FilterType" asp-items="Model.Filtering"></select>
+            <input asp-for="FilterInput" />
+        </div>
+
+        <input type="submit" class="btn btn-primary" />
+    </form>
+
+    @if (Model.Laptops.Count > 0)
+    {
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Laptop laptop in Model.Laptops)
+                {
+                    <tr>
+                        <th scope="row">@laptop.Id</th>
+                        <td>@laptop.Model</td>
+                        <td>@laptop.Year</td>
+                        <td>@laptop.Brand.Name</td>
+                        <td>@laptop.Price</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (Model.NoResultMsg != null)
+    {
+        <h3>@Model.NoResultMsg</h3>
+    }
+</div>

@@ -62,6 +62,7 @@ namespace LaptopMVCEntityFramework.Controllers
         {
             if (ModelState.IsValid)
             {
+                laptop.Brand = _context.Brands.First(brand => brand.Id == laptop.BrandId);
                 _context.Add(laptop);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

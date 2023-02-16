@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LaptopMVCEntityFramework.Data;
 using LaptopMVCEntityFramework.Models;
+using LaptopMVCEntityFramework.Models.ViewModels;
 
 namespace LaptopMVCEntityFramework.Controllers
 {
@@ -160,12 +161,90 @@ namespace LaptopMVCEntityFramework.Controllers
 
         public IActionResult BrandFilteringOrdering()
         {
-            return View();
+            return View(new OrderingFilteringBrandViewModel());
+        }
+
+        [HttpPost]
+        public IActionResult BrandFilteringOrdering(OrderingFilteringBrandViewModel orderingFilteringBrandVm)
+        {
+            //checks if it needs to display every brand or only a certain oen
+            if (orderingFilteringBrandVm.BrandName == "allBrands")
+            {
+                orderingFilteringBrandVm.Laptops = _context.Laptops.ToList();
+            }
+            else
+            {
+                orderingFilteringBrandVm.Laptops = _context.Laptops.Where(laptop => laptop.Brand.Name == orderingFilteringBrandVm.BrandName).ToList();
+            }
+
+            foreach(var laptop in orderingFilteringBrandVm.Laptops)
+            {
+                laptop.Brand = _context.Brands.First(brand => brand.Id == laptop.BrandId);
+            }
+
+            // looks for order type
+            switch (orderingFilteringBrandVm.OrderType)
+            {
+                case "yearAscending":
+                    orderingFilteringBrandVm.Laptops = orderingFilteringBrandVm.Laptops.OrderBy(laptop => laptop.Year).ToList();
+                    break;
+
+                case "yearDescending":
+                    orderingFilteringBrandVm.Laptops = orderingFilteringBrandVm.Laptops.OrderByDescending(laptop => laptop.Year).ToList();
+                    break;
+
+                case "priceAscending":
+                    orderingFilteringBrandVm.Laptops = orderingFilteringBrandVm.Laptops.OrderBy(laptop => laptop.Price).ToList();
+                    break;
+
+                case "priceDescending":
+                    orderingFilteringBrandVm.Laptops = orderingFilteringBrandVm.Laptops.OrderByDescending(laptop => laptop.Price).ToList();
+                    break;
+
+                default:
+                    break;
+            }
+
+            // checks if filter field is filled, if so looks for filter type
+            if (orderingFilteringBrandVm.FilterInput != null)
+            {
+                switch (orderingFilteringBrandVm.FilterType)
+                {
+                    case "aboveYear":
+                        orderingFilteringBrandVm.Laptops = orderingFilteringBrandVm.Laptops.Where(laptop => laptop.Year > orderingFilteringBrandVm.FilterInput).ToList();
+                        break;
+
+                    case "belowYear":
+                        orderingFilteringBrandVm.Laptops = orderingFilteringBrandVm.Laptops.Where(laptop => laptop.Year < orderingFilteringBrandVm.FilterInput).ToList();
+                        break;
+
+                    case "abovePrice":
+                        orderingFilteringBrandVm.Laptops = orderingFilteringBrandVm.Laptops.Where(laptop => laptop.Price > orderingFilteringBrandVm.FilterInput).ToList();
+                        break;
+
+                    case "belowPrice":
+                        orderingFilteringBrandVm.Laptops = orderingFilteringBrandVm.Laptops.Where(laptop => laptop.Price < orderingFilteringBrandVm.FilterInput).ToList();
+                        break;
+
+                    default:
+
+                        break;
+                }
+
+            }
+
+            //if there is no possible laptops to show
+            if (orderingFilteringBrandVm.NoResultMsg == null)
+            {
+                orderingFilteringBrandVm.NoResultMsg = "No Laptops Match Your Search";
+            }
+
+            return View(orderingFilteringBrandVm);
         }
 
         public IActionResult BrandsLaptopsDisplay()
         {
-            return View();
+            return View(new BrandLaptopsDisplayViewModel());
         }
     }
 }

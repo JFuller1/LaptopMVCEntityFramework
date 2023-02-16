@@ -10,7 +10,7 @@ namespace LaptopMVCEntityFramework.Models
         public int Id { get; set; }
         public string Model { get; set; } = null!;
         public int BrandId { get; set; }
-        public Brand Brand { get; set; } = null!;
+        public Brand Brand { get; set; } = null;
 
         [Column(TypeName = "decimal(6, 2)")]
         public decimal Price { get; set; }
