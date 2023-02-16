@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Compare Laptops";
+}
+
+@model LaptopMVCEntityFramework.Models.ViewModels.CompareLaptopsViewModel
+
+<div class="text-center">
+
+    <form method="post">
+        <div class="mb-lg-2">
+            <label asp-for="LaptopOneString"></label>
+            <select asp-for="LaptopOneString" asp-items="Model.Laptops"></select>
+        </div>
+
+        <div class="mb-lg-2">
+            <label asp-for="LaptopTwoString"></label>
+            <select asp-for="LaptopTwoString" asp-items="Model.Laptops"></select>
+        </div>
+
+
+        <input type="submit" class="btn btn-primary mb-lg-4" />
+    </form>
+
+
+    @if (Model.LaptopOneString != null)
+    {
+        @if (Model.LaptopOne != Model.LaptopTwo)
+        {
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">@Model.LaptopOne.Id</th>
+                        <td>@Model.LaptopOne.Model</td>
+                        <td>@Model.LaptopOne.Year</td>
+                        <td>@Model.LaptopOne.Brand.Name</td>
+                        <td>@Model.LaptopOne.Price</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">@Model.LaptopTwo.Id</th>
+                        <td>@Model.LaptopTwo.Model</td>
+                        <td>@Model.LaptopTwo.Year</td>
+                        <td>@Model.LaptopTwo.Brand.Name</td>
+                        <td>@Model.LaptopTwo.Price</td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h3>Same Laptop Models Were Chosen To Compare</h3>
+        }
+    }
+
+</div>

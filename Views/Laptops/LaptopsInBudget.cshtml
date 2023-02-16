@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Laptops In Budget";
+}
+
+@using LaptopMVCEntityFramework.Models.ViewModels
+@model LaptopsInBudgetViewModel
+
+<div class="text-center">
+    <form method="post">
+        <label asp-for="Budget"></label>
+        <input asp-for="Budget" />
+
+        <input type="submit" class="btn btn-primary" />
+    </form>
+
+    @if (Model != null)
+    {
+        if (Model.ValidLaptops.Count > 0)
+        {
+            <h3>Laptops In Budget:</h3>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Laptop laptop in Model.ValidLaptops)
+                    {
+                        <tr>
+                            <th scope="row">@laptop.Id</th>
+                            <td>@laptop.Model</td>
+                            <td>@laptop.Year</td>
+                            <td>@laptop.Brand.Name</td>
+                            <td>@laptop.Price</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h3>No Laptops In Budget</h3>
+        }
+    }
+</div>

@@ -1,0 +1,108 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LaptopMVCEntityFramework
+build_property.RootNamespace = LaptopMVCEntityFramework
+build_property.ProjectDir = C:\Users\Jaeden\source\repos\LaptopMVCEntityFramework\LaptopMVCEntityFramework\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Jaeden\source\repos\LaptopMVCEntityFramework\LaptopMVCEntityFramework
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Brands/BrandFilteringOrdering.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXEJyYW5kRmlsdGVyaW5nT3JkZXJpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Brands/BrandsLaptopsDisplay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXEJyYW5kc0xhcHRvcHNEaXNwbGF5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Brands/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Brands/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Brands/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Brands/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Brands/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Laptops/CheapestLaptops.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xDaGVhcGVzdExhcHRvcHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Laptops/CompareLaptops.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xDb21wYXJlTGFwdG9wcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Laptops/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Laptops/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Laptops/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Laptops/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Laptops/ExpensiveLaptops.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xFeHBlbnNpdmVMYXB0b3BzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Laptops/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Laptops/LaptopsInBudget.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xMYXB0b3BzSW5CdWRnZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jaeden/source/repos/LaptopMVCEntityFramework/LaptopMVCEntityFramework/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-iaoxd0mwob
